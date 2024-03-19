@@ -1,0 +1,212 @@
+@media screen and (max-width: 1428px) {
+    .header {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+    .about {
+        &__player {
+            &--yellow {
+                left: 70px;
+                top: 75px;
+            }
+            &--red {
+                right: 50px;
+                top: 250px;
+            }
+        }
+        &__star {
+            &--left-top {
+                left: 25px;
+                top: 235px;
+            }
+            &--left-bottom {
+                left: 140px;
+                top: 320px;
+            }
+            &--right-bottom {
+                top: 190px;
+                right: 30px;
+            }
+        }
+    }
+    .play {
+        &__player {
+            &--purple {
+                right: 50px;
+                top: 250px;
+            }
+            &--black {
+                left: 35px;
+                top: -50px;
+            }
+        }
+        &__star {
+            &--top-left {
+                top: 0;
+                left: 190px;
+            }
+            &--bottom-left {
+                top: 345px;
+                left: 185px;
+            }
+            &--bottom-right {
+                right: 100px;
+                top: 20px;
+            }
+        }
+    }
+    .footer-section {
+        padding-top: 160px;
+        &__wrapper--left {
+            padding-left: 145px;
+        }
+        &__icon {
+            top: 85px;
+            right: 50px;
+        }
+    }
+}
+
+.objectives {
+    &__star-left {
+        left: 100px;
+        bottom: 380px;
+    }
+    &__star-right {
+        right: 30px;
+        bottom: 265px;
+    }
+    &__red-star {
+        right: 30px;
+        bottom: 230px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .content-center {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .section-subtitle {
+        font-size: 24px;
+    }
+    .header {
+        &__promo-wrapper {
+            padding: 0 30px;
+            bottom: -36px;
+            padding: 10px 0;
+        }
+        &__promo {
+            margin-right: 15px;
+            &--upper {
+                font-size: 13px;
+            }
+        }
+    }
+    .banner {
+        padding-top: 345px;
+        padding-bottom: 225px;
+    }
+    .about {
+        padding-bottom: 100px;
+        &__fantasy {
+            height: 100px;
+        }
+    }
+    .play {
+        &__subtitle {
+            margin-bottom: 105px;
+        }
+    }
+    .screenshots {
+        &__wrapper {
+            column-gap: 20px;
+            row-gap: 25px;
+        }
+    }
+    .objectives {
+        &__container {
+            column-gap: 15px;
+        }
+        &__icon {
+            margin-right: 8px;
+        }
+    }
+    .footer-section {
+        padding-top: 100px;
+        &__title {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        &__icon {
+            height: 80px;
+            top: 115px;
+            right: 35px;
+        }
+        &__wrapper--left {
+            padding-left: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .button {
+        padding: 14px 35px;
+    }
+    .menu {
+        display: none;
+    }
+    .banner {
+        padding-top: 285px;
+        padding-bottom: 195px;
+        &__logo {
+            height: 130px;
+        }
+    }
+    .about {
+        &__fantasy {
+            height: 80px;
+        }
+    }
+    .awards {
+        &__wrapper {
+            padding: 24px 35px 10px;
+        }
+    }
+    .merch {
+        padding-top: 100px;
+        padding-bottom: 92px;
+    }
+    .footer-section {
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            padding-top: 35px; 
+            padding-right: 15px;
+            &--left {
+                padding-left: 110px;
+            }
+            &--right {
+                padding-left: 100px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .menu {
+            display: none;
+        }
+        .header {
+            &__promo {
+                overflow: hidden;
+            }
+        }
+        .form {
+            &__fieldset {
+                width: 330px;
+            }
+        }
+    }
+}
