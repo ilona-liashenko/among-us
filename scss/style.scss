@@ -25,6 +25,11 @@ body {
     border-radius: 27px;
     @include fonts(20px, 700);
     cursor: pointer;
+    &:hover {
+        background-color: $main-color;
+        color: $third-color;
+        transition: $animationTransition;
+    }
 }
 .section-title {
     @include fonts(45px, 700);
@@ -36,13 +41,11 @@ body {
     position: absolute;
 }
 .header {
-    display: block;
     position: fixed;
     background-color: $secondary-color;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
     height: 105px;
-    // vertical-align: middle;
     &__wrapper {
         height: 100%;
         display: flex;
@@ -57,14 +60,14 @@ body {
         bottom: -47px;
         right: 0;
         width: 100%;
+        overflow: hidden;
         display: flex;
-        justify-content: center;
         padding: 16px 0;
         background-color: #c61111;
         color: $main-color;
     }
     &__promo {
-        margin-right: 68px;
+        animation: runningLine 40s linear infinite;
         &:last-child {
             margin-right: 0;
         }
@@ -73,6 +76,18 @@ body {
             letter-spacing: 1.5px;
         }
     }
+}
+@keyframes runningLine {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.burger,
+.burger-checkbox {
+    display: none;
 }
 .menu {
     &__item {
@@ -84,12 +99,12 @@ body {
         &:last-child {
             margin-right: 0;
         }
-        &:hover .menu__link{
+        &:hover .menu__link {
             transition: $animationTransition;
             color: #d3c7b5;
         }
         &:hover .menu__icon {
-            transform: translateY(2px) ;
+            transform: translateY(2px);
             transition: $animationTransition;
         }
     }
@@ -140,8 +155,10 @@ body {
     padding-top: 415px;
     padding-bottom: 290px;
     text-align: center;
-    border-bottom-left-radius: 150% 20%;
-    border-bottom-right-radius: 150% 20%;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    transform: scaleX(1.1);
+    overflow: hidden;
     &__button {
         @include fonts(20px, 700);
         display: block;
@@ -167,34 +184,6 @@ body {
         width: 60%;
         margin-bottom: 5px;
     }
-    // &__player {
-    //     &--yellow {
-    //         left: -100px;
-    //         top: 75px;
-    //     }
-    //     &--red {
-    //         right: -100px;
-    //         top: 250px;
-    //     }
-    // }
-    // &__star {
-    //     &--left-top {
-    //         left: 0;
-    //         top: 235px;
-    //     }
-    //     &--left-bottom {
-    //         left: 70px;
-    //         top: 296px;
-    //     }
-    //     &--right-top {
-    //         top: 105px;
-    //         right: 85px;
-    //     }
-    //     &--right-bottom {
-    //         top: 210px;
-    //         right: 0;
-    //     }
-    // }
     &__player {
         &--yellow {
             left: -100px;
@@ -270,6 +259,7 @@ body {
         letter-spacing: 0.1em;
     }
     &__img {
+        // object-fit: cover;
         width: 100%;
         &--centered {
             grid-column: 2;
@@ -415,7 +405,11 @@ body {
         color: $third-color;
         &--white {
             color: $third-color;
-            background-color: $main-color ;
+            background-color: $main-color;
+            &:hover {
+                background-color: #555454;
+                color: $main-color;
+            }
         }
     }
     &__icon {
@@ -448,6 +442,7 @@ body {
 }
 .form {
     display: flex;
+    width: 100%;
     // &__fieldset {
     //     border: 1px solid #d3c7b5;
     //     position: relative;
@@ -465,17 +460,12 @@ body {
     // }
     &__input {
         padding: 11px 30px;
-
-        // padding-left: 10px;
         border-top-left-radius: 22px;
         border-bottom-left-radius: 22px;
         border: 1px solid #fff;
-        // height: 80%;
-        // bottom: 1px;
-        // left: 3px;
+        border-right: 0;
         width: 80%;
         background-color: #1c1c1c;
-        border: none;
         color: $main-color;
         &:focus {
             outline: none;
@@ -486,9 +476,8 @@ body {
         border-top-right-radius: 22px;
         border-bottom-right-radius: 22px;
         padding: 11px 30px;
-        right: 1px;
-        bottom: 1px;
-        border: 1px solid $third-color;
+        border: 1px solid $main-color;
+        border-left: 0;
         background-color: $third-color;
         color: $main-color;
     }
