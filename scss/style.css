@@ -117,7 +117,6 @@ body {
   bottom: -47px;
   right: 0;
   width: 100%;
-  overflow: hidden;
   display: flex;
   padding: 16px 0;
   background-color: #c61111;
@@ -202,19 +201,22 @@ body {
 }
 
 .banner {
+  display: block;
+  overflow: hidden;
+}
+.banner__container {
   position: relative;
   background-image: url(../img/banner_img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
+  max-width: 100%;
   padding-top: 415px;
   padding-bottom: 290px;
   text-align: center;
   border-bottom-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 10%;
   transform: scaleX(1.1);
-  overflow: hidden;
 }
 .banner__button {
   font-size: 20px;
