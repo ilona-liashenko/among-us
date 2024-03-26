@@ -612,9 +612,6 @@ body {
   .header__promo--upper {
     font-size: 13px;
   }
-  .banner {
-    padding-bottom: 225px;
-  }
   .about {
     padding-bottom: 100px;
   }
@@ -658,9 +655,6 @@ body {
   }
   .header__promo-wrapper {
     display: none;
-  }
-  .banner {
-    padding-bottom: 195px;
   }
   .banner__logo {
     height: 130px;
