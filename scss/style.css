@@ -613,7 +613,6 @@ body {
     font-size: 13px;
   }
   .banner {
-    padding-top: 345px;
     padding-bottom: 225px;
   }
   .about {
@@ -661,7 +660,6 @@ body {
     display: none;
   }
   .banner {
-    padding-top: 285px;
     padding-bottom: 195px;
   }
   .banner__logo {
